@@ -2,6 +2,7 @@
 let buttonLetsGo = document.getElementById("lets-go");
     console.log(buttonLetsGo);
     buttonLetsGo.addEventListener('click', bustBoredom);
+    buttonLetsGo.addEventListener('click', enableButton);
 
 
 
@@ -13,6 +14,13 @@ function bustBoredom() {
     .catch((error) => console.log(error));
     console.log('Hey there from bustBoredom() function');
 }
+
+const results = document.getElementById('btn-to-top');
+
+function enableButton() {
+    document.getElementById('btn-to-top').hidden = false;
+}
+    
 
 
 function displayActivityInfo(boredomBuster) {
@@ -36,9 +44,10 @@ function displayActivityInfo(boredomBuster) {
 
     displayFetch.appendChild(displayActivity);
     displayFetch.appendChild(displayType);
-    displayFetch.appendChild(imageTag);
-    
+    displayFetch.appendChild(imageTag);  
 };
+
+
 
 
 function findPhoto(displayType) {
